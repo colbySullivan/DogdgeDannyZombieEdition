@@ -181,7 +181,6 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
-  StartingHealth: 100
 --- !u!195 &50386328
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -226,7 +225,7 @@ Rigidbody:
   m_GameObject: {fileID: 50386326}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -356,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  BulletRange: 5000
+  BulletRange: 50000
   gun: {fileID: 140049713}
   upRecoil: {x: 0, y: 0, z: 0.5}
 --- !u!114 &140049715
@@ -981,7 +980,6 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
-  StartingHealth: 100
 --- !u!195 &499480833
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1026,7 +1024,7 @@ Rigidbody:
   m_GameObject: {fileID: 499480831}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1155,7 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df06705d5dda12e4090309b5c05e0b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 2
   BulletRange: 5000
   gun: {fileID: 565917113}
   upRecoil: {x: 0, y: 0, z: 0.5}
@@ -2653,7 +2651,6 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
-  StartingHealth: 0
 --- !u!195 &1699049387
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2698,7 +2695,7 @@ Rigidbody:
   m_GameObject: {fileID: 1699049385}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -3093,7 +3090,6 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
-  StartingHealth: 100
 --- !u!195 &1730061417
 NavMeshAgent:
   m_ObjectHideFlags: 0
