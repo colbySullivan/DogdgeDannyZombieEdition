@@ -4,12 +4,14 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public UnityEvent OnGunShoot;
+    public UnityEvent OnGunStop;
     public float FireCooldown;
 
     // default is semi
     public bool Automatic;
 
     private float CurrentCooldown;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,8 @@ public class Gun : MonoBehaviour
                     CurrentCooldown = FireCooldown;
                 }
             }
+            else if (Input.GetMouseButtonUp(0))
+                OnGunStop?.Invoke();
         }
         else
         {
@@ -41,6 +45,8 @@ public class Gun : MonoBehaviour
                     CurrentCooldown = FireCooldown;
                 }
             }
+            else if (Input.GetMouseButtonUp(0))
+                OnGunStop?.Invoke();
         }
         CurrentCooldown -= Time.deltaTime;
     }
