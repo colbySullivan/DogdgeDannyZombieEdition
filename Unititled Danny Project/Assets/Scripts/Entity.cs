@@ -18,6 +18,7 @@ public class Entity : MonoBehaviour
             Debug.Log(health);
             if(health <= 0f)
             {
+                Debug.Log("Killed " + gameObject.transform.name);
                 Destroy(gameObject);
             }
         }

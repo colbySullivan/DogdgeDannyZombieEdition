@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAi : MonoBehaviour
+public class AI : MonoBehaviour
 {
     public NavMeshAgent agent;
 
@@ -22,30 +22,6 @@ public class EnemyAi : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
-
-    //Health
-    [SerializeField] private float StartingHealth;
-    private float health;
-    public float Health
-    {
-        get
-        {
-            return health;
-        }
-        set
-        {
-            health = value;
-            Debug.Log(health);
-            if (health <= 0f)
-            {
-                DestroyEnemy();
-            }
-        }
-    }
-    void Start()
-    {
-        Health = StartingHealth;
-    }
 
     private void Awake()
     {

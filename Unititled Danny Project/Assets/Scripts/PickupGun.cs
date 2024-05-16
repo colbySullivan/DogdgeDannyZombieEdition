@@ -10,7 +10,7 @@ public class PickupGun : MonoBehaviour
         Debug.Log("Hit " + collision.transform.name);
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hit " + collision.transform.name);
+            //Debug.Log("Hit " + collision.transform.name);
             pickUp?.Invoke();
         }
     }

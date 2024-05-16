@@ -5,6 +5,7 @@ public class Gun : MonoBehaviour
 {
     public UnityEvent OnGunShoot;
     public UnityEvent OnGunStop;
+    public UnityEvent reloading;
     public float FireCooldown;
 
     // default is semi
@@ -47,6 +48,10 @@ public class Gun : MonoBehaviour
             }
             else if (Input.GetMouseButtonUp(0))
                 OnGunStop?.Invoke();
+            if (CurrentCooldown <= 0f)
+                OnGunStop?.Invoke();
+            else if (CurrentCooldown > 0f)
+                reloading?.Invoke();
         }
         CurrentCooldown -= Time.deltaTime;
     }
