@@ -38,21 +38,18 @@ public class Gun : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButtonDown(0))
+            if (CurrentCooldown <= 0f)
             {
-                if(CurrentCooldown <= 0f)
+                OnGunStop?.Invoke();
+                if (Input.GetMouseButtonDown(0))
                 {
                     OnGunShoot?.Invoke();
                     CurrentCooldown = FireCooldown;
                 }
             }
-            else if (Input.GetMouseButtonUp(0))
-                OnGunStop?.Invoke();
-            if (CurrentCooldown <= 0f)
-                OnGunStop?.Invoke();
-            else if (CurrentCooldown > 0f)
-                reloading?.Invoke();
-        }
+               if (CurrentCooldown > 0f)
+                    reloading?.Invoke();   
+        }   
         CurrentCooldown -= Time.deltaTime;
     }
 }
